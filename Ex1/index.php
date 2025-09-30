@@ -24,7 +24,7 @@ include "connection.php";
         </div>
         <div class="form-group">
             <label for="Model">Model:</label>
-            <input type="text" class="form-control" id="Model" placeholder="Enter Brand" name="lastname">
+            <input type="text" class="form-control" id="Model" placeholder="Enter Model" name="Model">
         </div>
         <div class="form-group">
             <label for="Price">Price:</label>
@@ -61,7 +61,7 @@ include "connection.php";
         <!-- Database connection -->
         <?php
         if (!empty($link)) {
-            $res=mysqli_query($link,"select * from table1");
+            $res=mysqli_query($link,"select * from table2");
         }
         while($row=mysqli_fetch_array($res))
         {
@@ -89,7 +89,7 @@ include "connection.php";
 <?php
 if(isset($_POST["insert"]))
 {
-    mysqli_query($link,"insert into table1 values (NULL,'$_POST[Brand]' ,'$_POST[Model]','$_POST[Price]','$_POST[Quantity]')");
+    mysqli_query($link,"insert into table2 values (NULL,'$_POST[Brand]' ,'$_POST[Model]','$_POST[Price]','$_POST[Quantity]')");
    ?>
     <script type="text/javascript">
     window.location.href=window.location.href;
