@@ -1,18 +1,18 @@
 <?php
 include "connection.php";
 $id=$_GET["id"];
-$brand="";
-$model="";
-$price="";
-$quantity="";
+$Brand="";
+$Model="";
+$Price="";
+$Quantity="";
 
 $res=mysqli_query($link,"select * from table2 where id=$id");
 while ($row=mysqli_fetch_array($res))
 {
-    $firstname=$row["brand"];
-    $lastname=$row["model"];
-    $email=$row["price"];
-    $contact=$row["quantity"];
+    $Brand=$row["Brand"];
+    $Model=$row["Model"];
+    $Price=$row["Price"];
+    $Quantity=$row["Quantity"];
 
 }
 header("location.index.php");
@@ -32,23 +32,23 @@ header("location.index.php");
     <!-- short column display for forms rows -->
     <!--visit https://www.w3schools.com/bootstrap/bootstrap_forms.asp search for forms template and use it.-->
     <div class="col-lg-4">
-        <h2>User data form</h2>
+        <h2>Laptop data form</h2>
         <form action="" name="form1" method="post">
             <div class="form-group">
-                <label for="firstname">First name:</label>
-                <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="firstname" value="<?php echo $firstname; ?>">
+                <label for="Brand">Brand:</label>
+                <input type="text" class="form-control" id="Brand" placeholder="Enter Brand name" name="Brand" value="<?php echo $Brand; ?>">
             </div>
             <div class="form-group">
-                <label for="lastname">Last name:</label>
-                <input type="text" class="form-control" id="lastname" placeholder="Enter Last name" name="lastname" value="<?php echo $lastname; ?>">
+                <label for="Model">Model:</label>
+                <input type="text" class="form-control" id="Model" placeholder="Enter Model" name="Model" value="<?php echo $Model; ?>">
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email" value="<?php echo $email; ?>">
+                <label for="Price">Price:</label>
+                <input type="text" class="form-control" id="Price" placeholder="Enter Price" name="Price" value="<?php echo $Price; ?>">
             </div>
             <div class="form-group">
-                <label for="contact">Contact:</label>
-                <input type="text" class="form-control" id="contact" placeholder="Enter contact" name="contact" value="<?php echo $contact; ?>">
+                <label for="Quantity">Quantity:</label>
+                <input type="text" class="form-control" id="Quantity" placeholder="Enter Quantity" name="Quantity" value="<?php echo $Quantity; ?>">
             </div>
             <button type="submit" name="update" class="btn btn-default">Update</button>
 
@@ -61,7 +61,7 @@ header("location.index.php");
 <?php
 if(isset($_POST["update"]))
     {
-        mysqli_query($link,"update table1 set firstname='$_POST[firstname]',lastname='$_POST[lastname]',email='$_POST[email]',contact='$_POST[contact]' where id=$id");
+        mysqli_query($link,"update table2 set Brand='$_POST[Brand]',Model='$_POST[Model]',Price='$_POST[Price]',Quantity='$_POST[Quantity]' where id=$id");
 
         ?>
         <script type="text/javascript">
