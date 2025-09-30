@@ -6,18 +6,20 @@
 CREATE DATABASE IF NOT EXISTS `LoginReg` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `LoginReg`;
 
--- Create table1 for user data
-CREATE TABLE IF NOT EXISTS `table1` (
+-- Create table2 for user data
+CREATE TABLE IF NOT EXISTS `table2` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(100) NOT NULL,
-  `lastname` varchar(100) NOT NULL,
-  `email` varchar(150) NOT NULL,
-  `contact` varchar(20) NOT NULL,
+  `Brand` VARCHAR(100) NOT NULL,
+  `Model` VARCHAR(150) NOT NULL,
+  `Price` DECIMAL(10,2) NOT NULL,
+  `Quantity` INT NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Insert sample data (optional)
-INSERT INTO `table1` (`firstname`, `lastname`, `email`, `contact`) VALUES
-('John', 'Doe', 'john.doe@example.com', '1234567890'),
-('Jane', 'Smith', 'jane.smith@example.com', '0987654321'),
-('Mike', 'Johnson', 'mike.johnson@example.com', '5555555555');
+INSERT INTO `table2` (Brand, Model, Price, Quantity) VALUES
+('Dell', 'Inspiron 15', 15000000, 10),
+('HP', 'Pavilion x360', 23000000, 5),
+('Asus', 'VivoBook S14', 17000000, 8),
+('Apple', 'MacBook Air M1', 26000000, 3),
+('Lenovo', 'ThinkPad E14', 20000000, 6);
