@@ -22,4 +22,4 @@ INSERT INTO `table2` (Brand, Model, Price, Quantity) VALUES
 ('HP', 'Pavilion x360', 23000000, 5),
 ('Asus', 'VivoBook S14', 17000000, 8),
 ('Apple', 'MacBook Air M1', 26000000, 3),
-('Lenovo', 'ThinkPad E14', 20000000, 6);
+('Lenovo', 'ThinkPad E14', 20000000, 6);s
