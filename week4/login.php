@@ -1,15 +1,15 @@
-<? php
+<?php
 include("db_connect.php");
 if (isset ($_POST['login'])) {
 $username = $_POST['username'];
-$password = md5 ($_POST[' password' ]) ;
-$query = "seLecT * FROM users WHERE username='$username' AND password='$password'";
-$result = mysqli_query($link, Squery);
+$password = md5($_POST['password']) ;
+$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+$result = mysqli_query($link, $query);
 if (mysqli_num_rows($result) == 1) {
 echo ("Login successful!");
 } else {
 echo "wrong infor";
-    }
+}
 }
 ?>
 <!DOCTYPE html>
