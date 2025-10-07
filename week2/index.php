@@ -6,8 +6,8 @@
 </head>
 <body>
 <?php
-$x = $_GET["x"];
-$y = $_GET["y"];
+$x = 5;
+$y = 7;
 echo "x:  " . $x . "<br/>";
 echo "y:  " . $y . "<br/>";
 echo "x/y:  " . ($x/$y) . "<br/>";
