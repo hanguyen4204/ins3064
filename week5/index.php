@@ -37,7 +37,7 @@ include "connection.php";
         <button type="submit" name="insert" class="btn btn-default">Insert</button>
         <button type="submit" name="update" class="btn btn-default">Update</button>
         <button type="submit" name="delete" class="btn btn-default">Delete</button>
-
+ 
     </form>
 </div>
 </div>
@@ -48,13 +48,12 @@ include "connection.php";
     <table class="table table-bordered">
         <thead>
         <tr>
-            <th>#</th>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Email</th>
-            <th>Contact</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>name</th>
+            <th>species</th>
+            <th>area</th>
+            <th>date_of_birth</th>
+            <th>sex</th>
+            <th>health condition</th>
         </tr>
         </thead>
         <tbody>
@@ -66,7 +65,6 @@ include "connection.php";
         while($row=mysqli_fetch_array($res))
         {
             echo "<tr>";
-            echo "<td>"; echo $row["id"]; echo "</td>";
             echo "<td>"; echo $row["firstname"]; echo "</td>";
             echo "<td>"; echo $row["lastname"]; echo "</td>";
             echo "<td>"; echo $row["email"]; echo "</td>";
